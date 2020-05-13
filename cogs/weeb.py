@@ -9,8 +9,8 @@ from urllib.parse import quote
 from discord.ext import commands
 from utils.watora import is_lover, get_str, is_basicpatron, get_image_from_url
 from weebapi import Client as weebclient
-from arcadia.errors import Forbidden
-from arcadia import Client as arcadiaclient
+#from arcadia.errors import Forbidden
+#from arcadia import Client as 
 from cogs.gestion import cmd_list, cmd_meme
 
 memer = "https://dankmemer.services/api"
@@ -32,12 +32,12 @@ class Weeb(commands.Cog):
             'authorization': f'Bearer {self.bot.tokens["KSOFT"]}'}
         self.dankmemer_header = {'authorization': self.bot.tokens['MEMER']}
         weebclient.pluggable(bot=bot, api_key=self.bot.tokens['WEEB'])
-        arcadiaclient.pluggable(
-            bot=bot, token=self.bot.tokens['ARCADIA'], aiosession=self.session)
+        #arcadiaclient.pluggable(
+        #    bot=bot, token=self.bot.tokens['ARCADIA'], aiosession=self.session)
 
     def cog_unload(self):
         asyncio.ensure_future(self.session.close())
-        del self.bot.arcadia
+        #del self.bot.arcadia
 
     async def get_image_ksoft(self, tag: str, nsfw: bool = True):
         params = f'?tag={tag}&nsfw={nsfw}'
@@ -103,7 +103,7 @@ class Weeb(commands.Cog):
         {help}
         """
         embed = discord.Embed(
-            description="Powered by weeb.sh and arcadia-api.")
+            description="Powered by weeb.sh.")
         embed.set_author(name="Image list", icon_url=self.bot.user.avatar_url)
         if not ctx.guild:
             embed.color = 0x71368a
@@ -199,8 +199,8 @@ async def _{m}(self, ctx, pic=None):
     elif not get_image_from_url(pic):
         return await self.bot.send_cmd_help(ctx)
 
-    img = await self.bot.arcadia.get_image('{m}'.replace('color', '').replace('halloween', 'jackolantern'), url=pic, timeout=20)
-    embed.set_image(url=f"attachment://%s" % img.filename)
+    #img = await self.bot.arcadia.get_image('{m}'.replace('color', '').replace('halloween', 'jackolantern'), url=pic, timeout=20)
+    #embed.set_image(url=f"attachment://%s" % img.filename)
 
     try:
         await ctx.send(file=img, embed=embed)
