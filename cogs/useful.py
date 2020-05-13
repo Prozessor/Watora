@@ -70,7 +70,10 @@ class Useful(commands.Cog):
             if not await is_lover(self.bot, ctx.author):
                 return await ctx.send(get_str(ctx, "cmd-weeb-dont-touch-me"))
             else:
-                return await ctx.send(get_str(ctx, "cmd-marry-too-young") + " {}".format("<:WatoraHyperBlush:458349268944814080>"))
+                #return await ctx.send(get_str(ctx, "cmd-marry-too-young") + " {}".format("<:WatoraHyperBlush:458349268944814080>"))
+                embed = discord.Embed(color=13596669)
+                embed.set_image(url="https://cdn.discordapp.com/emojis/458349268944814080.png")
+                return await ctx.send(content=get_str(ctx, "cmd-marry-too-young"), embed=embed)
 
         if not user:
             if str(ctx.author.id) in settings.marry:
@@ -137,6 +140,7 @@ class Useful(commands.Cog):
             return
 
         if response_message.content.lower().startswith('y'):
+            await confirm_message.delete()
             if str(user.id) in settings.marry:  # 2nd check if it changed since the command call
                 married_with = (await self.bot.safe_fetch('user', int(settings.marry[str(user.id)]['id']))
                                 or settings.marry[str(user.id)]['name'])
@@ -177,7 +181,11 @@ class Useful(commands.Cog):
 
             await SettingsDB.get_instance().set_glob_settings(settings)
         elif response_message.content.lower().startswith('n'):
-            await ctx.send(get_str(ctx, "cmd-marry-declined").format(ctx.author.mention) + " <:WatoraDisappointed:458349267715883060>", delete_after=30)
+            await confirm_message.delete()
+            #await ctx.send(get_str(ctx, "cmd-marry-declined").format(ctx.author.mention) + " <:WatoraDisappointed:458349267715883060>", delete_after=30)
+            embed = discord.Embed(color=13596669)
+            embed.set_image(url="https://cdn.discordapp.com/emojis/458349267715883060.png")
+            await ctx.send(content=get_str(ctx, "cmd-marry-declined").format(ctx.author.mention), embed=embed)
         else:
             try:
                 await confirm_message.delete()
@@ -379,7 +387,10 @@ class Useful(commands.Cog):
 
         Wut ? Did you just find an easter eggs ?
         """
-        await ctx.send("<:WatoraLost:458349268621721601>")
+        #await ctx.send("<:WatoraLost:458349268621721601>")
+        embed = discord.Embed(color=13596669)
+        embed.set_image(url="https://cdn.discordapp.com/emojis/458349268621721601.png")
+        await ctx.send(content=None, embed=embed)
 
     @commands.command()
     @commands.cooldown(rate=1, per=1.0, type=commands.BucketType.user)
