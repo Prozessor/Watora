@@ -5899,8 +5899,12 @@ class Music(commands.Cog):
             embed.description = "**[{}](https://www.patreon.com/watora)** {}\n{}".format(get_str(guild, "support-watora", bot=self.bot, can_owo=False),
                                                                                          get_str(guild, "support-watora-end", bot=self.bot), get_str(guild, "suggest-features", bot=self.bot).format(f"`{get_server_prefixes(self.bot, guild)}suggestion`"))
         else:
+            #embed.description = "{} {}\n{}".format(get_str(guild, "thanks-support", bot=self.bot, can_owo=False),
+            #                                       "<:WatoraLove:553618991328002058>", get_str(guild, "manage-autoleave-time", bot=self.bot).format(f"`{get_server_prefixes(self.bot, guild)}autoleave`"))
             embed.description = "{} {}\n{}".format(get_str(guild, "thanks-support", bot=self.bot, can_owo=False),
-                                                   "<:WatoraLove:553618991328002058>", get_str(guild, "manage-autoleave-time", bot=self.bot).format(f"`{get_server_prefixes(self.bot, guild)}autoleave`"))
+                                                   "", get_str(guild, "manage-autoleave-time", bot=self.bot).format(f"`{get_server_prefixes(self.bot, guild)}autoleave`"))
+            embed.set_image(url="https://cdn.discordapp.com/emojis/553618991328002058.png")
+            #embed.set_thumbnail(url="https://cdn.discordapp.com/emojis/553618991328002058.png")
         try:
             await channel.send(embed=embed)
         except discord.Forbidden:
