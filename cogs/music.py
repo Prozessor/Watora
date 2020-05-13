@@ -751,7 +751,7 @@ class Music(commands.Cog):
         thumb = track.artwork
         uri = track.uri.lower()
 
-        if 'youtube' in uri:
+        if 'youtube' in uri or 'youtu.be' in uri: 
             new_thumb, desc = await self.youtube_api.get_youtube_infos(track.identifier)
             if player.current and desc:
                 player.current.extra['timestamps'] = self.get_timestamps(desc)
