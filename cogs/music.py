@@ -546,12 +546,12 @@ class Music(commands.Cog):
         # self.bot.lavalink.add_node(region='asia', host=asia['HOST'], password=asia['PASSWORD'], name='Asia', **resume_config)
         # self.bot.lavalink.add_node(
         #     region='eu', host=eu['HOST'], password=eu['PASSWORD'], name='Europe', port=2333, **resume_config)
-        self.bot.lavalink.add_node(
-            region='us', host=us['HOST'], password=us['PASSWORD'], name='America', port=2333, **resume_config)
+        #self.bot.lavalink.add_node(
+        #    region='us', host=us['HOST'], password=us['PASSWORD'], name='America', port=2333, **resume_config)
 
         # Premium Nodes
-        self.bot.lavalink.add_node(
-            region='us', host=premium['HOST'], password=premium['PASSWORD'], name='Premium', port=2333, is_perso=True, **resume_config)
+        #self.bot.lavalink.add_node(
+        #    region='us', host=premium['HOST'], password=premium['PASSWORD'], name='Premium', port=2333, is_perso=True, **resume_config)
 
         self.bot.add_listener(
             self.bot.lavalink.voice_update_handler, 'on_socket_response')

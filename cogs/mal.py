@@ -372,28 +372,7 @@ class Mal(commands.Cog):
             mal_id = await self.bot.jikan.search(search_type=type, query=query)
             mal_id = mal_id['results'][0]['mal_id']
         except (JikanException, KeyError, IndexError):
-            if 'manga' in type:
-                # This is a custom search including only myanimelist/manga website
-                google_key = self.bot.tokens['MANGA']
-            elif 'character' in type:
-                # This is a custom search key including only myanimelist/character website
-                google_key = self.bot.tokens['CHARACTER']
-            else:
-                # This is a custom search key including only myanimelist/anime website
-                google_key = self.bot.tokens['ANIME']
-
-            try:
-                search_url = "https://www.googleapis.com/customsearch/v1/{}?q=site:myanimelist.net {} {} ".format('siterestrict' if scd else '', type, query) + "&start=" + '1' + "&key=" + \
-                             self.bot.tokens['GOOGLE'] + "&cx=" + google_key
-                async with self.session.get(search_url) as r:
-                    result = await r.json()
-                    result = result['items'][0]['link']
-                    mal_id = re.findall(f'/{type}/(\d+)/', result)
-                    mal_id = mal_id[0]
-            except Exception:
-                if not scd:
-                    return await self.google_results(type=type, query=query, scd=True)
-                return False
+            return False
 
         return int(mal_id)
 
