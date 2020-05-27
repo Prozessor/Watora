@@ -6,8 +6,10 @@ Head over to the official repository **https://github.com/Zenrac/Watora**
 ## Requirements: <br>
 - [Python3.6+ with pip](https://www.python.org/downloads/)<br>
 - [mongodb](https://www.mongodb.com/download-center/community) <br>
-- [Java](https://www.java.com/fr/download/) <br>
-- [Watora Translations](https://github.com/Zenrac/watora-translations)
+- [Watora Translations](https://github.com/Zenrac/watora-translations) <br>
+- [Lavalink](https://github.com/Frederikam/Lavalink) <br>
+- **Needs Java 11+ for Lavalink** Use: [OpenJDK](https://jdk.java.net/archive/) or [AdoptOpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk13&jvmVariant=hotspot) <br>
+> *Java 11 appears to have some issues with Discord's TLS 1.3. Java 14 has other undiagnosed HTTPS problems. Use Java 13. Docker images have been updated. See #258, #260
 
 ## Installation
 ```
