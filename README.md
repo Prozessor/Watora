@@ -26,34 +26,29 @@ Install or update all dependencies with `update.bat` on Windows, or `update.sh` 
 
 ## Get Token and API Keys
 
-- WEEB (WEEB_API) -> https://weeb.sh/ 
-```
-weeb.sh currently is an invite only based service for discord bot creators wanting to enhance their bots with awesome and easy to use features.<br>
-If you think that you should also be a part of weeb.sh, feel free to write them at devs@weeb.sh<br>
-```
-<br>
-- GENIUS (LYRICS_API) -> https://genius.com/developers
-`Create an API Client and generate and copy your Client Accsess Token`
-<br>
-- SPOTIFY ID & SECRET -> https://developer.spotify.com/dashboard/
-`Login/Sign Up and create an APP and get your Client ID & Secret.`
-<br>
-- YT_KEY (YOUTUBE_API) -> https://developers.google.com/youtube/v3/getting-started
-`Login and have fun with the linked guide from Google`
-<br>
+#### WEEB (WEEB_API) -> https://weeb.sh/ 
+> weeb.sh currently is an invite only based service for discord bot creators wanting to enhance their bots with awesome and easy to use features.<br>If you think that you should also be a part of weeb.sh, feel free to write them at devs@weeb.sh
 
-- KSOFT (KSOFT_API) -> https://api.ksoft.si/
-```
-Login and create an application
-If your application was created successfully a green message will appear. After that please wait patiently for administrators to approve your application, when your app is approved you'll receive a ping in the official server and the token will appear in your dashboard. 
-```
-<br>
-- MEMER (MEMER_API) -> https://dankmemer.services/
-```
-Login, go to Dashboard and make a Request.
-ATM:
-❌ New applications have been closed for the time being. We apologize for the inconvenience.
-```
+
+#### GENIUS (LYRICS_API) -> https://genius.com/developers <br>
+> Create an API Client and generate and copy your Client Accsess Token
+
+
+#### SPOTIFY ID & SECRET -> https://developer.spotify.com/dashboard/ <br>
+> Login/Sign Up and create an APP and get your Client ID & Secret.
+
+
+#### YT_KEY (YOUTUBE_API) -> https://developers.google.com/youtube/v3/getting-started <br>
+> Login and have fun with the linked guide from Google
+
+
+#### KSOFT (KSOFT_API) -> https://api.ksoft.si/
+> Login and create an application<br>If your application was created successfully a green message will appear. After that please wait patiently for administrators to approve your application, when your app is approved you'll receive a ping in the official server and the token will appear in your dashboard.
+
+
+#### MEMER (MEMER_API) -> https://dankmemer.services/ 
+> Login, go to Dashboard and make a Request.<br>❌ New applications have been closed for the time being. We apologize for the inconvenience.
+
 
 
 ## License
