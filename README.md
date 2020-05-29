@@ -33,7 +33,7 @@ Install or update all dependencies with `update.bat` on Windows, or `update.sh` 
 
 
 #### GENIUS (LYRICS_API) -> https://genius.com/developers <br>
-> Create an API Client and generate and copy your Client Accsess Token
+> Create an API Client and generate and copy your Client Access Token
 
 
 #### SPOTIFY ID & SECRET -> https://developer.spotify.com/dashboard/ <br>
