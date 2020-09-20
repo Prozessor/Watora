@@ -49,7 +49,7 @@ Install or update all dependencies with `update.bat` on Windows, or `update.sh` 
 
 
 #### MEMER (MEMER_API) -> https://dankmemer.services/ 
-> Login, go to Dashboard and make a Request.<br>❌ New applications have been closed for the time being. We apologize for the inconvenience.
+> Login, go to Dashboard and make a Request.
 
 
 
