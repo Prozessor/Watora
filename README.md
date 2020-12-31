@@ -56,5 +56,3 @@ Install or update all dependencies with `update.bat` on Windows, or `update.sh` 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-[![Discord Bots](https://discordbots.org/api/widget/220644154177355777.svg)](https://discordbots.org/bot/220644154177355777)
