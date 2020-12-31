@@ -29,7 +29,7 @@ Install or update all dependencies with `update.bat` on Windows, or `update.sh` 
 ## Get Token and API Keys
 
 #### WEEB (WEEB_API) -> https://weeb.sh/ 
-> weeb.sh currently is an invite only based service for discord bot creators wanting to enhance their bots with awesome and easy to use features.<br>If you think that you should also be a part of weeb.sh, feel free to write them at devs@weeb.sh
+> weeb.sh currently is an invite only based service for discord bot creators wanting to enhance their bots with awesome and easy to use features.<br>If you think that you should also be a part of weeb.sh, feel free to write them at weeb@botlabs.gg
 
 
 #### GENIUS (LYRICS_API) -> https://genius.com/developers <br>
